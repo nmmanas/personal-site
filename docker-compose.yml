@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  gatsby:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "8001:8001"
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "1"
+      GATSBY_WEBPACK_PUBLICPATH: "/"
+    command: npm run develop
