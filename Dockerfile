@@ -15,5 +15,5 @@ ENV NODE_ENV=development
 ENV CHOKIDAR_USEPOLLING=1
 ENV GATSBY_WEBPACK_PUBLICPATH=/
 
-# Run gatsby develop on container start
-CMD ["npm", "run", "develop"]
+# Run gatsby develop on container start with host 0.0.0.0
+CMD ["npm", "run", "develop", "--host", "0.0.0.0"]
